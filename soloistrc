@@ -25,29 +25,26 @@ recipes:
 - sprout-ssh::known_hosts_github
 
 # development (general)
-- sprout-base::workspace_directory
-- sprout-git::install
-- sprout-git::projects
+- sprout-vim
+- sprout-vim::tmux
+- sprout-vim::config
 
-# development (rails)
+# development (ruby)
 - sprout-rbenv
 - sprout-ruby
 
 node_attributes:
-  workspace_directory: projects
+  workspace_directory: Development
   sprout:
     git:
       authors:
-        - initials: fj
-          name: Fernando Junior
-          username: fernando-alves
+        - initials: ks
+          name: Karl Stoney 
+          username: Stono 
       projects:
-        - name: sprout-wrap
-          url: https://github.com/fernando-alves/sprout-wrap.git
-        - name: dot-files
-          url: https://github.com/fernando-alves/dot-files.git
-          post_clone_commands:
-            - sh setup.sh
+        - name: stocknet 
+          workspace_path: stono/stocknet
+          url: git@github.com:jambr/stocknet.git
     settings:
       clock_format: EEE HH:mm
     dock_preferences:
@@ -76,33 +73,26 @@ node_attributes:
     formulas:
       - name: universal-ctags
         head: true
-      - chromedriver
-      - node
       - wget
-      - rbenv-binstubs
-      - rbenv-aliases
-      - rbenv-use
-      - ruby-build
+      - ack
+      - android-platform-tools
+      - ansible
+      - awscli
+      - rabbitmq
+      - redis
+      - p7zip
+      - nmap
+      - ssh-copy-id
+      - zsh
+      - zsh-completions
+      - python
+      - git-flow
     casks:
       - google-chrome
-      - dropbox
-      - atom
-      - evernote
-      - flycut
-      - rowanj-gitx
       - vagrant
       - virtualbox
-      - docker
       - screenhero
-      - ngrok
-      - istat-menus
       - skype
-      - vlc
       - spotify
-      - quicksilver
-      - 1password
-      - utorrent
-      - caffeine
-      - unrarx
+      - 2password
       - steam
-      - java
